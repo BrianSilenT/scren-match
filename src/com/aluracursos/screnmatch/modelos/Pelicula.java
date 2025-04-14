@@ -1,6 +1,6 @@
 package com.aluracursos.screnmatch.modelos;
 
-public class pelicula {
+public class Pelicula {
     private String nombre;
 
     private int fechaDeLanzamiento;

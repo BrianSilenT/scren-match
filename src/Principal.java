@@ -1,12 +1,14 @@
-import com.aluracursos.screnmatch.modelos.pelicula;
-import com.aluracursos.screnmatch.modelos.serie;
+import com.aluracursos.screnmatch.calculos.CalculadoraDeTiempo;
+import com.aluracursos.screnmatch.modelos.Pelicula;
+import com.aluracursos.screnmatch.modelos.Serie;
 
-public class principal {
+public class Principal {
     public static void main(String[] args) {
-        pelicula miPelicula = new pelicula();
+        Pelicula miPelicula = new Pelicula();
         miPelicula.setNombre("encanto");
         miPelicula.setFechaDeLanzamiento(2021);
         miPelicula.setDuracionMinutos(120);
+
 
         miPelicula.muestraFichaTecnica();
         miPelicula.evaluate(9);
@@ -14,7 +16,7 @@ public class principal {
         miPelicula.evaluate(9);
         System.out.println(miPelicula.calculaMedia());
 
-        pelicula miOtraPelicula = new pelicula();
+        Pelicula miOtraPelicula = new Pelicula();
         miOtraPelicula.setNombre("matrix");
         miOtraPelicula.setFechaDeLanzamiento(1999);
         miOtraPelicula.setDuracionMinutos(125);
@@ -26,7 +28,7 @@ public class principal {
         miOtraPelicula.evaluate(8);
         System.out.println(miOtraPelicula.calculaMedia());
 
-        serie casaDragon = new serie();
+        Serie casaDragon = new Serie();
         casaDragon.setNombre("la casa del dragon");
         casaDragon.setFechaDeLanzamiento(2022);
         casaDragon.setTemporada(1);
@@ -35,5 +37,13 @@ public class principal {
         casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionMinutos());
 
+        
+        CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
+        calculadora.incluye(miPelicula);
+        calculadora.incluye(casaDragon);
+        calculadora.incluye(miOtraPelicula);
+
+        
+        System.out.println(calculadora.getTiempoTotal());
     }
 }

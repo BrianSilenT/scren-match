@@ -1,6 +1,6 @@
 package com.aluracursos.screnmatch.modelos;
 
-public class serie extends pelicula {
+public class Serie extends Pelicula {
     int episodiosDetemporada;
 
     int minutosEpisodiotemporada;

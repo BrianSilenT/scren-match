@@ -1,10 +1,12 @@
-import com.aluracursos.screnmatch.modelos.pelicula;
+package com.aluracursos.screnmatch;
 
-public class animes {
+import com.aluracursos.screnmatch.modelos.Pelicula;
+
+public class Animes {
 
     public static void main(String[] args) {
 
-        pelicula anime = new pelicula();
+        Pelicula anime = new Pelicula();
         anime.setNombre("invencible");
         anime.setFechaDeLanzamiento(2010);
         anime.setDuracionEpisodios(12);
@@ -16,7 +18,7 @@ public class animes {
         anime.evaluate(10);
         System.out.println(anime.calculaMedia());
 
-        pelicula animeDos = new pelicula();
+        Pelicula animeDos = new Pelicula();
         animeDos.setNombre("overlord");
         animeDos.setFechaDeLanzamiento(2010);
         animeDos.setDuracionEpisodios(10);
